@@ -1,0 +1,22 @@
+# yaml for emotion training
+
+pretrain_model_dir: './trans_datas/pretrained_models/electra_chinese_small'
+# pretrain_model_dir: './trans_datas/pretrained_models/roberta_chinese_4_512'
+
+model_name: 'electra'
+# model_name: 'roberta'
+
+num_labels: 2
+
+output_dir: './results'
+
+logging_dir: './logs'
+train_batch_size: 32  # roberta should change to 8
+eval_batch_size: 64
+num_train_epochs: 1
+max_steps: -1
+save_steps: 100
+eval_steps: 100
+do_train: True
+do_eval: False
+save_total_limit: 5
